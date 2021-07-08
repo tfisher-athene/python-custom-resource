@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "python-custom-resource"
+version = "0.1.0"
+description = ""
+authors = ["Talen Fisher <86801287+tfisher-athene@users.noreply.github.com>"]
+packages = [
+    { include = "src" },
+    { include = "src/**/*.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+crhelper = "^2.0.10"
+boto3 = "^1.17.107"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,17 @@
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  ExampleCustomResource:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: custom-resource.handler
+      Runtime: python3.8
+      Timeout: 30
+      CodeUri: ../obj
+      MemorySize: 256
+
+Outputs:
+  ExampleCustomResourceArn:
+    Value: !GetAtt ExampleCustomResource.Arn
+    Description: ARN of the Example Custom Resource Lambda.
+    Export:
+      Name: !Sub ${AWS::StackName}:ExampleCustomResourceArn

@@ -1,0 +1,10 @@
+Parameters:
+  ResourceProviderLambdaArn:
+    Type: String
+    Description: ARN of the resource provider lambda.
+
+Resources:
+  ResourceInstance:
+    Type: Custom::Resource
+    Properties:
+      ServiceToken: !Ref ResourceProviderLambdaArn
