@@ -1,3 +1,4 @@
+Description: Template that uses the lambda-backed custom resource provider to create a test custom resource.
 Parameters:
   ResourceProviderLambdaArn:
     Type: String

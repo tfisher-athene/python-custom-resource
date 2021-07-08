@@ -1,4 +1,5 @@
 Transform: AWS::Serverless-2016-10-31
+Description: Template that creates a lambda-backed custom resource provider.
 Resources:
   ExampleCustomResource:
     Type: AWS::Serverless::Function
